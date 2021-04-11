@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+class RetailItem{
+	public :
+		string description;
+		int unitOnHand;
+		double price;
+		
+		RetailItem(string description, int unitOnHand, double price){
+			RetailItem::description = description;
+			RetailItem::unitOnHand = unitOnHand;
+			RetailItem::price = price;
+		}
+		
+		void cetak_data (){
+			cout <<description<<unitOnHand<<"\t\t"<<price<<endl;
+		}
+};
+
+int main(int argc, char** argv) {
+	cout << "\tDescription     Units on Hand\tPrice " << endl;
+	cout << "============================================="<< endl;
+	RetailItem satu ("Item #1 Jacket\t\t", 12, 59.95d);
+	RetailItem dua ("Item #2 Designer Jeans\t", 40, 34.95d);
+	RetailItem tiga ("Item #3 Shirt\t\t", 20, 24.95d);
+	
+	satu.cetak_data();
+	dua.cetak_data();
+	tiga.cetak_data();
+	 
+	return 0;
+}
